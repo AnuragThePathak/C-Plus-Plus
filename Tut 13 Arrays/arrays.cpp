@@ -28,6 +28,9 @@ int main()
     cout<<"*p="<<*p<<endl;
     cout<<"*(p+1)="<<*(p+1)<<endl;
     cout<<"*(p+2)="<<*(p+2)<<endl;
+    int ar[2]={1,2};
+    cout<<ar<<endl;
+    cout<<ar[]<<endl;
     
     return 0;
 }
