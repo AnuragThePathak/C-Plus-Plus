@@ -6,13 +6,15 @@ class X
 {
     int val;
     // friend swap(int , int);//built-in function can't be used so far
-    friend void swp(X*,Y*);
-    public:
+    friend void swp(X *, Y *);
+
+public:
     void setData(int a)
     {
-        val=a;
+        val = a;
     }
-    int getData(){
+    int getData()
+    {
         return val;
     }
 };
@@ -20,22 +22,24 @@ class X
 class Y
 {
     int val;
-    friend void swp(X*,Y*);
-    public:
+    friend void swp(X *, Y *);
+
+public:
     void setData(int a)
     {
-        val=a;
+        val = a;
     }
-    int getData(){
+    int getData()
+    {
         return val;
     }
 };
 
-void swp(X* o1,Y* o2)
+void swp(X *o1, Y *o2)
 {
-    int p=o1->val;
-    o1->val=o2->val;
-    o2->val=p;
+    int p = o1->val;
+    o1->val = o2->val;
+    o2->val = p;
 }
 int main()
 {
@@ -45,6 +49,6 @@ int main()
     o2.setData(8);
     swp(&o1, &o2);
     // swap(o1.val, o2.val)
-    cout<<o1.getData()<<" "<<o2.getData()<<endl;
+    cout << o1.getData() << " " << o2.getData() << endl;
     return 0;
 }

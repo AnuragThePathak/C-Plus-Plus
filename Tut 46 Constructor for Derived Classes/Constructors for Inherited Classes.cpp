@@ -38,6 +38,7 @@ class Derived:public Base1, public Base2
     //     cin>>a>>b>>c>>d;
     // }
     //above code has no use without constructor for Derived which is written below
+
     Derived(int x,int y,int z, int v):Base1(z),Base2(v) //here Base1 , Base2 can be written in reverse order as well. We can also write different values and variables in initialization section just like initialization list of variables
     {
         c=x, d=y;

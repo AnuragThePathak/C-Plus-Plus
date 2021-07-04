@@ -14,9 +14,9 @@ public:
     {
         a = x, b = y;
     }
-    Number(Number &obj)
+    Number(const Number &obj)
     {
-        cout<<"***Copy constructor is invoked***"<<endl;
+        cout << "***Copy constructor is invoked***" << endl;
         a = obj.a, b = obj.b;
     } //it's not neccessary as we get a copy constructor by default
 
@@ -32,11 +32,16 @@ int main()
     n2.getData();
     n3 = Number(n1);
     n3.getData();
+
     n4 = n1;
     n4.getData();
     Number n5 = n1;
+
+    // We can also use this syntax *** Number n5(n1); ***
+    // The default copy constructor makes a shallow copy. To make a deep copy, you must write a copy constructor and overload the assignment operator, otherwise the copy will point to the original, with disastrous consequences.
+
     n5.getData();
-    n4=n2;//In this way also objects can be copied
+    n4 = n2; //The assignment operator also makes a shallow copy if used not like we did earlier. In this way also objects can be copied but doesn't invoke copy constructor it calls assignment operator only
     n4.getData();
     return 0;
 }

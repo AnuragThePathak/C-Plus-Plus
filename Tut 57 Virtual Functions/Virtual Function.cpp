@@ -72,5 +72,6 @@ int main()
         per[i]->putdata();
     }
     
+    // Please note that the code is not fully correct as dynamically allocated memories are not deallocated
     return 0;
 }

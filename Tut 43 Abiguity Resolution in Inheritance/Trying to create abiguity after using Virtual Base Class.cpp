@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 
 class Student
@@ -16,7 +17,7 @@ public:
     }
 };
 
-class Acad :virtual public Student
+class Acad : virtual public Student
 {
 protected:
     int phy, math;
@@ -34,7 +35,7 @@ public:
     }
 };
 
-class Sports :virtual public Student
+class Sports : virtual public Student
 {
 protected:
     int sports;
@@ -42,7 +43,7 @@ protected:
 public:
     void setSprtReslt()
     {
-        setData();//In this sort of cases when we are editing the value of some variable in both the classes, the lastly edited value is obtained i.e. overwritting occurs on editing
+        setData(); //In this sort of cases when we are editing the value of some variable in both the classes, the lastly edited value is obtained i.e. overwritting occurs on editing
         cin >> sports;
     }
 
@@ -54,11 +55,15 @@ public:
 
 class Result : public Acad, public Sports
 {
-    protected:
-    int total=phy+math+sports;
-    public:
+    //In this case we are being saved from getting ambiguities because of virtual base class
+    // In case we didn't use virtual base class we had redefine the functions inside class student where we start the function and then inside that call the function using scope resolution operator
+    // It basically happens when the two 
+protected:
+    int total = phy + math + sports;
 
-    void setResult(){
+public:
+    void setResult()
+    {
         // setData();
         setAcadReslt();
         setSprtReslt();
@@ -74,8 +79,11 @@ class Result : public Acad, public Sports
 int main()
 {
     Result st;
+    Acad ob1;
     st.setData();
     st.setResult();
     st.getResult();
+    ob1.getData();
+    
     return 0;
 }
