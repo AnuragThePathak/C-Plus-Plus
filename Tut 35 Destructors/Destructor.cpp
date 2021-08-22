@@ -5,7 +5,7 @@ using namespace std;
 class Coor
 {
     int x, y;
-    static int count;
+    static int count;  // Static variables with same name being same/ not unique for each and every oject of same class, can't be part/member of a class. Hence they can't be used here. However we can declare them inside a member function as they will not be a part of the class in such case. 
     public:
     void SetData()
     {

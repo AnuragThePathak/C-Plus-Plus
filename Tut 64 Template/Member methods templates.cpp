@@ -2,7 +2,7 @@
 using namespace std;
 
 template <class T>
-class Oxx
+class MyClass
 {
     T a, b;
 
@@ -12,19 +12,19 @@ public:
 };
 
 template <class T>
-void Oxx<T>::setData()
+void MyClass<T>::setData()
 {
     cin >> a >> b;
 }
 template <class T>
-void Oxx<T>::getData()
+void MyClass<T>::getData()
 {
     cout << "a=" << a << ", b=" << b << endl;
 }
 
 int main()
 {
-    Oxx<char> obj;
+    MyClass<char> obj;
     obj.setData();
     obj.getData();
     return 0;

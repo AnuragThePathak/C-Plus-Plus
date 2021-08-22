@@ -2,7 +2,7 @@
 using namespace std;
 
 //various methods in comments are tested to check the interrelationship between private members and public members and there relations with others
-class student
+class Student
 {
     private:
     float attendence;
@@ -13,12 +13,12 @@ class student
     // if we declare the fuction in private it also becomes inaccessible
 };
 
-void student::inputAttendence()
+void Student::inputAttendence()
 {
     cin>>attendence;
     // return attendence;
 }
-int student::attendMark()
+int Student::attendMark()
 {
     // cin>>attendence;
     inputAttendence();
@@ -30,7 +30,7 @@ int student::attendMark()
 }
 int main()
 {
-    student cavani;
+    Student cavani;
     cin>>cavani.mark;
     cout<<cavani.attendMark()<<endl;
     return 0;
