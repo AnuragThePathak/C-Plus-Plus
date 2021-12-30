@@ -2,7 +2,7 @@
 
 ## Contents
 
-This repository contains all C++ code, I have written while learning.
+This repository contains all C++ code, I have written while learning, which was my first programming language.
 
 ## How to use
 
