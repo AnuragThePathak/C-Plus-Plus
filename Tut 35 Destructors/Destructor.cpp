@@ -14,19 +14,19 @@ class Coor
     Coor(int a, int b)
     {
         x=a, y=b;
-        count++;
-        cout<<"Created object number "<<count<<endl;
+        Coor.count += 1;
+        cout<<"Created object number "<<Coor.count<<endl;
     }
     Coor()
     {
         x=0, y=0;
-        count++;
-        cout<<"Created object number "<<count<<endl;
+        Coor.count += 1;
+        cout<<"Created object number "<<Coor.count<<endl;
     }
     ~Coor()
     {
-        count--;
-        cout<<"Destroying object and now remaining "<<count<<endl;
+        Coor.count -= 1;
+        cout<<"Destroying object and now remaining "<<Coor.count<<endl;
     }
 };
 int main()
